@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>/System/Library/LocationBundles</string>
+	<string>/Library/User Pictures/Nature</string>
+	<string>/Library/PrivateFrameworks</string>
+	<string>/Library/Documentation</string>
+	<string>/System/Library/Compositions</string>
+	<string>/System/Library/Image Capture/Support</string>
+	<string>/usr/share</string>
+	<string>/System/Library/Speech/Voices</string>
+	<string>/Library/Preferences/SystemConfiguration</string>
+	<string>/Library/Sandbox</string>
+	<string>/private/var/msgs</string>
+	<string>/System/Library/LinguisticData/zh</string>
+	<string>/tmp</string>
+	<string>/private/var/root/Library</string>
+	<string>/private/var/root</string>
+	<string>/Library/Audio/MIDI Configurations</string>
+	<string>/private/var/db/openldap/run</string>
+	<string>/private/var/mail</string>
+	<string>/net</string>
+	<string>/private/var/db/dslocal/nodes/Default</string>
+	<string>/private/var/spool/postfix/hold</string>
+	<string>/private/var/db/openldap</string>
+	<string>/System/Library/Components</string>
+	<string>/private/var/db/emondClients</string>
+	<string>/private/var/backups</string>
+	<string>/private/var/spool/postfix/defer</string>
+	<string>/usr/include</string>
+	<string>/Library/Python/2.7</string>
+	<string>/Library/Keyboard Layouts</string>
+	<string>/Library/Filesystems/NetFSPlugins</string>
+	<string>/usr</string>
+	<string>/Library/Keychains</string>
+	<string>/Library/ColorPickers</string>
+	<string>/Library/Screen Savers</string>
+	<string>/Library/Audio/Sounds/Banks</string>
+	<string>/System/Library/Compositions/.Localization.bundle</string>
+	<string>/System/Library/Security</string>
+	<string>/System/Library/Sandbox</string>
+	<string>/System/Library/QuickTimeJava</string>
+	<string>/Library/Perl</string>
+	<string>/System</string>
+	<string>/private/var/at/jobs</string>
+	<string>/System/Library/Assistant/Plugins</string>
+	<string>/private/var/folders</string>
+	<string>/private/var/log/com.apple.launchd</string>
+	<string>/System/Library/LaunchDaemons</string>
+	<string>/usr/local</string>
+	<string>/Library/Logs/PostgreSQL</string>
+	<string>/private/var/rpc</string>
+	<string>/System/Library/LinguisticData/de</string>
+	<string>/Library/Fonts</string>
+	<string>/System/Library/BridgeSupport/include</string>
+	<string>/private</string>
+	<string>/System/Library/Services</string>
+	<string>/Library/Frameworks</string>
+	<string>/Library/Receipts</string>
+	<string>/Library/ScriptingAdditions</string>
+	<string>/private/var/spool/cups</string>
+	<string>/System/Library/Automator</string>
+	<string>/Library/Audio/Apple Loops Index</string>
+	<string>/private/var/spool/postfix/corrupt</string>
+	<string>/System/Library/XPCServices</string>
+	<string>/Library/Audio/MIDI Devices</string>
+	<string>/Library/Image Capture/Tools</string>
+	<string>/private/var/db/FIPS</string>
+	<string>/Library/SystemProfiler</string>
+	<string>/private/var/db</string>
+	<string>/private/var/spool/postfix/saved</string>
+	<string>/Library/LaunchDaemons</string>
+	<string>/bin</string>
+	<string>/private/var/vm</string>
+	<string>/private/var/at/tmp</string>
+	<string>/System/Library/InternetAccounts</string>
+	<string>/System/Library/ColorSync</string>
+	<string>/System/Library/OpenSSL</string>
+	<string>/System/Library/OpenSSL/private</string>
+	<string>/private/var/spool/postfix/bounce</string>
+	<string>/System/Library/OpenSSL/misc</string>
+	<string>/Library/OpenDirectory/Mappings</string>
+	<string>/System/Library/WidgetResources/AppleClasses</string>
+	<string>/Library/Preferences/SystemConfiguration/CaptiveNetworkSupport</string>
+	<string>/System/Library/Graphics/Quartz Composer Patches</string>
+	<string>/private/var/log/fax</string>
+	<string>/Library/Automator</string>
+	<string>/Library/Updates</string>
+	<string>/System/Library/PerformanceMetrics</string>
+	<string>/System/Library/LinguisticData</string>
+	<string>/System/Library/Messages/PlugIns</string>
+	<string>/Library/Image Capture/TWAIN Data Sources</string>
+	<string>/private/var/db/dslocal/nodes/Default/computers</string>
+	<string>/System/Library/Caches/com.apple.kext.caches/Directories</string>
+	<string>/Library/Video/Plug-Ins</string>
+	<string>/private/var/rpc/ncacn_np</string>
+	<string>/Library/Messages</string>
+	<string>/private/var/db/openldap/openldap-data</string>
+	<string>/Library/PDF Services</string>
+	<string>/Library/Graphics/Image Units</string>
+	<string>/Library/OpenDirectory/Templates</string>
+	<string>/System/Library/SystemConfiguration</string>
+	<string>/Volumes</string>
+	<string>/private/var/log/asl</string>
+	<string>/cores</string>
+	<string>/Library/Python/2.7/site-packages</string>
+	<string>/System/Library/Keychains</string>
+	<string>/sbin</string>
+	<string>/Library/Internet Plug-Ins</string>
+	<string>/private/var/spool/cups/cache</string>
+	<string>/System/Library/Perl</string>
+	<string>/Library/Image Capture</string>
+	<string>/Library/Python/2.5</string>
+	<string>/System/Library/Frameworks</string>
+	<string>/Library/Audio/Sounds</string>
+	<string>/Library/Spotlight</string>
+	<string>/private/var/log/performance</string>
+	<string>/System/Library/LinguisticData/it</string>
+	<string>/System/Library/LinguisticData/ru</string>
+	<string>/System/Library/Spotlight</string>
+	<string>/Library/Compositions</string>
+	<string>/Library/Documentation/License.lpdf/Contents/Resources</string>
+	<string>/System/Library/Filesystems</string>
+	<string>/Library/PreferencePanes</string>
+	<string>/private/var/log/DiagnosticMessages</string>
+	<string>/System/Library/Image Capture/Tools</string>
+	<string>/private/var/at/spool</string>
+	<string>/Library/Ruby</string>
+	<string>/Library/Java/Extensions</string>
+	<string>/usr/sbin</string>
+	<string>/System/Library/ColorPickers</string>
+	<string>/Library/Developer</string>
+	<string>/Library/WebServer</string>
+	<string>/Library/Modem Scripts</string>
+	<string>/usr/sbin/authserver</string>
+	<string>/Library/iTunes/iTunes Plug-ins</string>
+	<string>/private/var/jabberd</string>
+	<string>/System/Library/StagedFrameworks/Safari</string>
+	<string>/Library/Graphics/Quartz Composer Plug-Ins</string>
+	<string>/Library/Audio/Apple Loops</string>
+	<string>/System/Library/Address Book Plug-Ins</string>
+	<string>/Library/Java/JavaVirtualMachines</string>
+	<string>/Library/User Pictures/Instruments</string>
+	<string>/Library/Logs</string>
+	<string>/Library/Audio/Plug-Ins/Components</string>
+	<string>/System/Library/SocialServices</string>
+	<string>/System/Library/WidgetResources</string>
+	<string>/System/Library/LinguisticData/nl</string>
+	<string>/private/var/spool</string>
+	<string>/Library/Audio/MIDI Devices/Generic/Images</string>
+	<string>/System/Library/LinguisticData/en</string>
+	<string>/Library/Contextual Menu Items</string>
+	<string>/private/var/yp/binding</string>
+	<string>/System/Library/Caches</string>
+	<string>/Library/Widgets</string>
+	<string>/private/var/db/dslocal/nodes/Default/groups</string>
+	<string>/private/var/rwho</string>
+	<string>/Library/Python/2.3/site-packages</string>
+	<string>/Library/iTunes</string>
+	<string>/System/Library/Metadata</string>
+	<string>/System/Library/SyncServices/AutoRegistration</string>
+	<string>/Library/Sandbox/Profiles</string>
+	<string>/var/tmp</string>
+	<string>/System/Library/Password Server Filters</string>
+	<string>/System/Library/LinguisticData/es</string>
+	<string>/private/var/spool/postfix</string>
+	<string>/Library/Input Methods</string>
+	<string>/Library/Image Capture/Automatic Tasks</string>
+	<string>/private/var/db/ServerPerfLogClients</string>
+	<string>/Library/LaunchAgents</string>
+	<string>/private/var/yp</string>
+	<string>/System/Library/WidgetResources/button</string>
+	<string>/System/Library/Extensions</string>
+	<string>/System/Library/PrivateFrameworks</string>
+	<string>/private/var/run</string>
+	<string>/private/var/db/dyld</string>
+	<string>/private/var/tmp</string>
+	<string>/private/var/db/ConfigurationProfiles</string>
+	<string>/private/var/root/Library/Preferences</string>
+	<string>/Library/Audio/MIDI Devices/Generic</string>
+	<string>/Library/Image Capture/Support</string>
+	<string>/System/Library/User Template</string>
+	<string>/usr/standalone/i386/EfiLoginUI</string>
+	<string>/System/Library/Graphics/Quartz Composer Plug-Ins</string>
+	<string>/Library/StartupItems</string>
+	<string>/System/Library/OpenSSL/certs</string>
+	<string>/System/Library/CoreServices</string>
+	<string>/Library/Graphics</string>
+	<string>/private/var/at</string>
+	<string>/private/var/log/cups</string>
+	<string>/Library/Documentation/License.lpdf</string>
+	<string>/private/var/spool/fax</string>
+	<string>/System/Library/Caches/com.apple.kext.caches</string>
+	<string>/private/var/log/sa</string>
+	<string>/Library/Preferences</string>
+	<string>/System/Library/Displays/Overrides</string>
+	<string>/private/var/db/launchd.db</string>
+	<string>/System/Library/ScriptingDefinitions</string>
+	<string>/System/Library/Accounts/Access</string>
+	<string>/private/var/db/dslocal/nodes</string>
+	<string>/System/Library/Spelling</string>
+	<string>/System/Library/StartupItems</string>
+	<string>/System/Library/Video</string>
+	<string>/System/Library/OpenDirectory</string>
+	<string>/private/var/netboot</string>
+	<string>/Library/Python/2.3</string>
+	<string>/System/Library/DTDs</string>
+	<string>/System/Library/Image Capture/Devices</string>
+	<string>/Library/Documentation/Help</string>
+	<string>/Users</string>
+	<string>/Library/Audio/Sounds/Alerts</string>
+	<string>/System/Library/Fonts</string>
+	<string>/System/Library/Input Methods</string>
+	<string>/Library/Audio/Plug-Ins</string>
+	<string>/System/Library/LinguisticData/zh/sc</string>
+	<string>/System/Library/Printers</string>
+	<string>/Library/Receipts/db</string>
+	<string>/usr/sbin/authserver/tools</string>
+	<string>/private/var/spool/postfix/trace</string>
+	<string>/System/Library/Image Capture/TWAIN Data Sources</string>
+	<string>/System/Library/Image Capture</string>
+	<string>/System/Library/QuickLook</string>
+	<string>/System/Library/Accessibility</string>
+	<string>/tmp/Microsoft Office 2011</string>
+	<string>/private/tftpboot</string>
+	<string>/System/Library/Accounts/Authentication</string>
+	<string>/private/var/log/ppp</string>
+	<string>/Library/Python/2.6/site-packages</string>
+	<string>/Library/Printers</string>
+	<string>/dev</string>
+	<string>/private/var/log</string>
+	<string>/System/Library/SystemProfiler</string>
+	<string>/private/var/spool/postfix/deferred</string>
+	<string>/System/Library/ScreenReader</string>
+	<string>/Library/OpenDirectory</string>
+	<string>/System/Library/BridgeSupport</string>
+	<string>/System/Library/Displays</string>
+	<string>/Users/Shared</string>
+	<string>/.vol</string>
+	<string>/Library/Extensions</string>
+	<string>/private/var/db/dslocal/nodes/Default/aliases</string>
+	<string>/private/var/log/emond</string>
+	<string>/Library/Image Capture/Devices</string>
+	<string>/Library/Preferences/DirectoryService</string>
+	<string>/System/Library/Sounds</string>
+	<string>/private/var/spool/mqueue</string>
+	<string>/System/Library/LinguisticData/fr</string>
+	<string>/System/Library/Colors</string>
+	<string>/Library/WebServer/Documents</string>
+	<string>/private/var/rpc/ncalrpc</string>
+	<string>/System/Library/Caches/com.apple.kext.caches/Startup</string>
+	<string>/System/Library/SyncServices/AutoRegistration/Schemas</string>
+	<string>/System/Library/DirectoryServices</string>
+	<string>/private/var/spool/postfix/maildrop</string>
+	<string>/Library/User Pictures/Sports</string>
+	<string>/Library/QuickTime</string>
+	<string>/Library/Logs/DiagnosticReports</string>
+	<string>/private/var</string>
+	<string>/private/var/empty</string>
+	<string>/opt</string>
+	<string>/Library/Application Support</string>
+	<string>/usr/standalone/i386</string>
+	<string>/private/var/db/dslocal/nodes/Default/networks</string>
+	<string>/System/Library/SyncServices/Schemas</string>
+	<string>/private/var/db/lockdown</string>
+	<string>/private/var/db/GPURestartReporter</string>
+	<string>/System/Library/Speech/Synthesizers</string>
+	<string>/private/var/db/dslocal/nodes/Default/users</string>
+	<string>/Library/Audio/MIDI Drivers</string>
+	<string>/System/Library/QuickTime</string>
+	<string>/System/Library/LaunchAgents</string>
+	<string>/Library/User Pictures/Flowers</string>
+	<string>/System/Library/Assistant</string>
+	<string>/private/var/jabberd/ChatHome</string>
+	<string>/Library/User Pictures</string>
+	<string>/Library/Documentation/iPod</string>
+	<string>/private/var/spool/postfix/private</string>
+	<string>/System/Library/Filters</string>
+	<string>/System/Library/SyncServices</string>
+	<string>/private/var/spool/uucp</string>
+	<string>/System/Library/Keyboard Layouts</string>
+	<string>/System/Library/UserEventPlugins</string>
+	<string>/System/Library/ScriptingAdditions</string>
+	<string>/Library/Audio/Plug-Ins/VST</string>
+	<string>/Library/Security</string>
+	<string>/System/Library/Java</string>
+	<string>/Library/Video</string>
+	<string>/System/Library/Caches/com.apple.kext.caches/Directories/System/Library/Extensions</string>
+	<string>/private/tmp</string>
+	<string>/usr/libexec</string>
+	<string>/Library/Messages/PlugIns</string>
+	<string>/Library/User Pictures/Animals</string>
+	<string>/System/Library/User Template/Non_localized</string>
+	<string>/private/var/db/BootCaches</string>
+	<string>/System/Library/MonitorPanels</string>
+	<string>/private/var/db/locationd</string>
+	<string>/Library/User Pictures/Fun</string>
+	<string>/Library/Python</string>
+	<string>/Library/Spelling</string>
+	<string>/Library/Caches</string>
+	<string>/System/Library/Sandbox/Profiles</string>
+	<string>/System/Library/LinguisticData/en/US</string>
+	<string>/private/var/audit</string>
+	<string>/private/var/db/geod</string>
+	<string>/Library</string>
+	<string>/Library/Filesystems</string>
+	<string>/Library/Python/2.5/site-packages</string>
+	<string>/System/Library/TextEncodings</string>
+	<string>/private/var/db/dyld/shared_region_roots</string>
+	<string>/Library/Audio/Plug-Ins/HAL</string>
+	<string>/private/var/agentx</string>
+	<string>/private/var/named</string>
+	<string>/System/Library/Screen Savers</string>
+	<string>/private/var/db/launchd.db/com.apple.launchd</string>
+	<string>/private/var/spool/postfix/incoming</string>
+	<string>/usr/bin</string>
+	<string>/Library/WebServer/share</string>
+	<string>/private/var/lib/postfix</string>
+	<string>/private/var/spool/cups/cache/rss</string>
+	<string>/private/var/log/radius/radacct</string>
+	<string>/Applications</string>
+	<string>/System/Library/SyncServices/AutoRegistration/Clients</string>
+	<string>/Library/Java</string>
+	<string>/Library/Audio/Plug-Ins/MAS</string>
+	<string>/Library/WebServer/CGI-Executables</string>
+	<string>/System/Library/Caches/com.apple.kext.caches/Directories/System/Library</string>
+	<string>/System/Library/Graphics</string>
+	<string>/private/var/spool/postfix/active</string>
+	<string>/System/Library/Messages</string>
+	<string>/Library/QuickLook</string>
+	<string>/Library/Audio/Apple Loops/Apple</string>
+	<string>/System/Library/Video/Plug-Ins</string>
+	<string>/System/Library</string>
+	<string>/home</string>
+	<string>/System/Library/Speech/Recognizers</string>
+	<string>/Library/Audio/MIDI Patch Names</string>
+	<string>/System/Library/WidgetResources/.parsers</string>
+	<string>/private/var/pgsql_socket_alt</string>
+	<string>/System/Library/Image Capture/Automatic Tasks</string>
+	<string>/Library/Desktop Pictures/Solid Colors</string>
+	<string>/System/Library/Accounts/Notification</string>
+	<string>/Library/Audio</string>
+	<string>/usr/standalone</string>
+	<string>/Library/Documentation/License.lpdf/Contents</string>
+	<string>/Network</string>
+	<string>/private/var/db/crls</string>
+	<string>/Library/ColorSync</string>
+	<string>/Library/Desktop Pictures</string>
+	<string>/Library/Scripts</string>
+	<string>/private/var/lib</string>
+	<string>/Library/PrivilegedHelperTools</string>
+	<string>/var</string>
+	<string>/Library/Desktop Pictures/.thumbnails</string>
+	<string>/usr/lib</string>
+	<string>/Library/Dictionaries</string>
+	<string>/private/var/at/tabs</string>
+	<string>/System/Library/Speech</string>
+	<string>/private/var/db/dslocal</string>
+	<string>/Library/Documentation/Applications</string>
+	<string>/System/Library/LoginPlugins</string>
+	<string>/Library/Preferences/Audio</string>
+	<string>/Library/Bundles</string>
+	<string>/private/var/spool/postfix/flush</string>
+	<string>/Library/DirectoryServices</string>
+	<string>/System/Library/KerberosPlugins</string>
+	<string>/System/Library/PreferencePanes</string>
+	<string>/private/etc</string>
+	<string>/System/Library/Caches/com.apple.kext.caches/Directories/System</string>
+	<string>/private/var/spool/cups/tmp</string>
+	<string>/System/Library/Accounts</string>
+	<string>/private/var/log/uucp</string>
+	<string>/System/Library/Tcl</string>
+	<string>/Library/Components</string>
+	<string>/System/Library/StagedFrameworks</string>
+</array>
+</plist>
