@@ -43,6 +43,7 @@
 		BBD2E5F017E18B700042A1C7 /* PackageUninstallerUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E5ED17E18B700042A1C7 /* PackageUninstallerUtility.m */; };
 		BBD2E5FB17E18B840042A1C7 /* launchctl_lite.c in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E5F617E18B840042A1C7 /* launchctl_lite.c */; };
 		BBE228C417DFFD2700E58A2D /* im.kernelpanic.PackageUninstallerHelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB38601517D090D3003C482F /* im.kernelpanic.PackageUninstallerHelper */; };
+		CEF0057C17E7ECDC00443220 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF0057B17E7ECDC00443220 /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		BBD2E5F717E18B840042A1C7 /* launchctl_lite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = launchctl_lite.h; sourceTree = "<group>"; };
 		BBD2E5F817E18B840042A1C7 /* launchd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = launchd.h; sourceTree = "<group>"; };
 		BBD2E5F917E18B840042A1C7 /* vproc_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vproc_priv.h; sourceTree = "<group>"; };
+		CEF0057B17E7ECDC00443220 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF0057C17E7ECDC00443220 /* ServiceManagement.framework in Frameworks */,
 				BB770BEA17E1880200C30386 /* Security.framework in Frameworks */,
 				BB09094117DAD75000CD92DD /* SecurityInterface.framework in Frameworks */,
 				BB0908FE17DAD07900CD92DD /* Cocoa.framework in Frameworks */,
@@ -259,6 +262,7 @@
 		BBAD87A317D0224E001A05EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEF0057B17E7ECDC00443220 /* ServiceManagement.framework */,
 				BBAD87A917D0224E001A05EB /* AppKit.framework */,
 				BB770BE917E1880200C30386 /* Security.framework */,
 				BB09094017DAD75000CD92DD /* SecurityInterface.framework */,
@@ -614,7 +618,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Developer ID Application: In House Only";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -653,7 +657,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Developer ID Application: In House Only";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;

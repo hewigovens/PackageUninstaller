@@ -13,7 +13,8 @@ It's really annoying that Apps installed by pkg files don't provide a way to uni
 
 ###Build
 
-* Update your codesign certificate infomation before build
+* Create a Self Signed Root/Code Signing named "Developer ID Application: In House Only" from KeyChain Acess.app
+* Update your codesign certificate if you have enrolled Mac Developer Program:
 * * key `SMPrivilegedExecutables` in `PackageUninstallerApp-Info.plist`
 * * key `SMAuthorizedClients` in `PackageUninstallerHelper-Info.plist`
 
@@ -28,3 +29,7 @@ It's really annoying that Apps installed by pkg files don't provide a way to uni
 ###Credit
 * Icon designed by Nikolay Verin - [http://ncrow.deviantart.com/](http://ncrow.deviantart.com/)
 * launchctl from [opensource.apple.com](http://www.opensource.apple.com/source/launchd/launchd-442.26.2/)
+
+###License
+
+The MIT License (MIT)

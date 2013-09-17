@@ -227,6 +227,7 @@
 	<string>/System/Library/Accounts/Authentication</string>
 	<string>/private/var/log/ppp</string>
 	<string>/Library/Python/2.6/site-packages</string>
+	<string>/Library/Python/2.6</string>
 	<string>/Library/Printers</string>
 	<string>/dev</string>
 	<string>/private/var/log</string>

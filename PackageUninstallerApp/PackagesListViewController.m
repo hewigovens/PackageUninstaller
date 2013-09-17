@@ -19,11 +19,11 @@
     xpc_connection_t connection_;
 }
 @property (strong, retain) NSMutableArray* packagesList;
-@property (nonatomic, retain) IBOutlet NSArrayController* packagesListArrayController;
-@property (nonatomic, retain) IBOutlet NSTableView* packagesListView;
-@property (nonatomic, retain) IBOutlet NSButton* uninstallButton;
-@property (nonatomic, retain) IBOutlet NSButton* refreshButton;
-@property (nonatomic, retain) IBOutlet SFAuthorizationView* authorizationView;
+@property (nonatomic, weak) IBOutlet NSArrayController* packagesListArrayController;
+@property (nonatomic, weak) IBOutlet NSTableView* packagesListView;
+@property (nonatomic, weak) IBOutlet NSButton* uninstallButton;
+@property (nonatomic, weak) IBOutlet NSButton* refreshButton;
+@property (nonatomic, weak) IBOutlet SFAuthorizationView* authorizationView;
 @property (strong, readonly) IBOutlet AuthStatus* authStatus;
 @property (strong, retain) SFAuthorization* authorization;
 @property (nonatomic, assign) BOOL helperAvailable;

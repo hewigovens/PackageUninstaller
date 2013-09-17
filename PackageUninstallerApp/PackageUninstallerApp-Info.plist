@@ -33,7 +33,7 @@
 	<key>SMPrivilegedExecutables</key>
 	<dict>
 		<key>im.kernelpanic.PackageUninstallerHelper</key>
-		<string>identifier im.kernelpanic.PackageUninstallerHelper and certificate leaf[subject.CN] = &quot;Developer ID Application:&quot;</string>
+		<string>identifier im.kernelpanic.PackageUninstallerHelper and certificate leaf[subject.CN] = &quot;Developer ID Application: In House Only&quot;</string>
 	</dict>
 </dict>
 </plist>
