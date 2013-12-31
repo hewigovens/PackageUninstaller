@@ -38,6 +38,8 @@
 		BB770BEA17E1880200C30386 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB770BE917E1880200C30386 /* Security.framework */; };
 		BB81E0C817E193D9003C3AE1 /* AuthStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = BB81E0C717E193D9003C3AE1 /* AuthStatus.m */; };
 		BBAA237217E19A6C00D66AFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBAA237117E19A6C00D66AFB /* Images.xcassets */; };
+		BBAAB8301872F3A1000597B9 /* PUCmdDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BBAAB82F1872F3A1000597B9 /* PUCmdDispatcher.m */; };
+		BBD1213C186DCE3C004679B3 /* NSXPCMachService.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD1213B186DCE3C004679B3 /* NSXPCMachService.m */; };
 		BBD2E5EE17E18B700042A1C7 /* PackagesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E5EA17E18B700042A1C7 /* PackagesListViewController.m */; };
 		BBD2E5EF17E18B700042A1C7 /* PackagesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD2E5EB17E18B700042A1C7 /* PackagesListViewController.xib */; };
 		BBD2E5F017E18B700042A1C7 /* PackageUninstallerUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E5ED17E18B700042A1C7 /* PackageUninstallerUtility.m */; };
@@ -128,9 +130,13 @@
 		BB81E0C617E193D9003C3AE1 /* AuthStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthStatus.h; sourceTree = "<group>"; };
 		BB81E0C717E193D9003C3AE1 /* AuthStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthStatus.m; sourceTree = "<group>"; };
 		BBAA237117E19A6C00D66AFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BBAAB82E1872F3A1000597B9 /* PUCmdDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUCmdDispatcher.h; sourceTree = "<group>"; };
+		BBAAB82F1872F3A1000597B9 /* PUCmdDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUCmdDispatcher.m; sourceTree = "<group>"; };
 		BBAD87A417D0224E001A05EB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BBAD87A617D0224E001A05EB /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
 		BBAD87A917D0224E001A05EB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BBD1213A186DCE3C004679B3 /* NSXPCMachService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCMachService.h; sourceTree = "<group>"; };
+		BBD1213B186DCE3C004679B3 /* NSXPCMachService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXPCMachService.m; sourceTree = "<group>"; };
 		BBD2E5E817E18B5B0042A1C7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = PackageUninstallerApp/Constants.h; sourceTree = SOURCE_ROOT; };
 		BBD2E5E917E18B5B0042A1C7 /* PackagesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PackagesListViewController.h; path = PackageUninstallerApp/PackagesListViewController.h; sourceTree = SOURCE_ROOT; };
 		BBD2E5EA17E18B700042A1C7 /* PackagesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PackagesListViewController.m; path = PackageUninstallerApp/PackagesListViewController.m; sourceTree = SOURCE_ROOT; };
@@ -224,6 +230,10 @@
 			children = (
 				BB38602117D09119003C482F /* PackageUninstallerHelper-Info.plist */,
 				BB38602417D093A8003C482F /* im.kernelpanic.PackageUninstallerHelper.plist */,
+				BBAAB82E1872F3A1000597B9 /* PUCmdDispatcher.h */,
+				BBAAB82F1872F3A1000597B9 /* PUCmdDispatcher.m */,
+				BBD1213A186DCE3C004679B3 /* NSXPCMachService.h */,
+				BBD1213B186DCE3C004679B3 /* NSXPCMachService.m */,
 				BB38601817D090D3003C482F /* main.m */,
 				BB38601A17D090D3003C482F /* Supporting Files */,
 			);
@@ -422,6 +432,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBAAB8301872F3A1000597B9 /* PUCmdDispatcher.m in Sources */,
+				BBD1213C186DCE3C004679B3 /* NSXPCMachService.m in Sources */,
 				BB31921317E18C2300565F8B /* launchctl_lite.c in Sources */,
 				BB38601917D090D3003C482F /* main.m in Sources */,
 			);
@@ -551,6 +563,7 @@
 		BB38601F17D090D3003C482F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PackageUninstallerHelper/PackageUninstallerHelper-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -580,6 +593,7 @@
 		BB38602017D090D3003C482F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PackageUninstallerHelper/PackageUninstallerHelper-Prefix.pch";
 				INFOPLIST_FILE = "$(TARGET_NAME)-Info.plist";

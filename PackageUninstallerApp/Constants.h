@@ -25,7 +25,8 @@
 typedef enum{
     PU_CMD_SYN = 0,
     PU_CMD_ACK,
-    PU_CMD_REMOVE_BOM
+    PU_CMD_REMOVE_BOM,
+    PU_CMD_EXIT,
 }PUCommand;
 
 #endif

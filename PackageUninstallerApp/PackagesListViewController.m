@@ -148,6 +148,7 @@
             }
             
             self.helperAvailable = NO;
+            [self.uninstallButton setEnabled:NO];
             
         } else {
             NSLog(@"Unexpected XPC event");
@@ -160,7 +161,7 @@
     xpc_dictionary_set_int64(message, PU_VERSION_KEY, PU_COMMAND_VERSION);
     xpc_dictionary_set_int64(message, PU_COMMAND_KEY, PU_CMD_SYN);
     xpc_dictionary_set_string(message, PU_WHITE_LIST_KEY, [[[NSBundle mainBundle] pathForResource:@"SystemFolders" ofType:@"plist"] UTF8String]);
-    NSLog(@"send ack command");
+    NSLog(@"send syn command");
     
     xpc_object_t reply = xpc_connection_send_message_with_reply_sync(connection, message);
     PUCommand cmd = (PUCommand)xpc_dictionary_get_int64(reply, PU_COMMAND_KEY);
@@ -169,6 +170,7 @@
         connection_ = connection;
         NSLog(@"connection established");
         self.helperAvailable = YES;
+        [self.uninstallButton setEnabled:YES];
     }
     xpc_release(message);
 }
