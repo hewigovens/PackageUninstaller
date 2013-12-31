@@ -41,7 +41,9 @@
     
     CFErrorRef cfError;
     result = SMJobBless(kSMDomainSystemLaunchd, (__bridge CFStringRef)label, authRef,&cfError);
-    *error = CFBridgingRelease(cfError);
+    if (error) {
+        *error = CFBridgingRelease(cfError);
+    }
     
     return result;
 }
