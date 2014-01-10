@@ -23,6 +23,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		BB00B6E8187FB8E20080042A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB00B6E7187FB8E20080042A /* Crashlytics.framework */; };
 		BB0908E617D99C7200CD92DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = BB0908E517D99C7200CD92DD /* main.c */; };
 		BB0908EF17D99D0800CD92DD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0908DD17D999CA00CD92DD /* CoreFoundation.framework */; };
 		BB0908FE17DAD07900CD92DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAD87A417D0224E001A05EB /* Cocoa.framework */; };
@@ -102,6 +103,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BB00B6E7187FB8E20080042A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = thirdparty/Crashlytics.framework; sourceTree = "<group>"; };
 		BB0908DD17D999CA00CD92DD /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		BB0908E317D99C7200CD92DD /* launchctl_lite_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = launchctl_lite_test; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0908E517D99C7200CD92DD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF0057C17E7ECDC00443220 /* ServiceManagement.framework in Frameworks */,
+				BB00B6E8187FB8E20080042A /* Crashlytics.framework in Frameworks */,
 				BB770BEA17E1880200C30386 /* Security.framework in Frameworks */,
 				BB09094117DAD75000CD92DD /* SecurityInterface.framework in Frameworks */,
 				BB0908FE17DAD07900CD92DD /* Cocoa.framework in Frameworks */,
@@ -272,6 +275,7 @@
 		BBAD87A317D0224E001A05EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB00B6E7187FB8E20080042A /* Crashlytics.framework */,
 				CEF0057B17E7ECDC00443220 /* ServiceManagement.framework */,
 				BBAD87A917D0224E001A05EB /* AppKit.framework */,
 				BB770BE917E1880200C30386 /* Security.framework */,
@@ -333,6 +337,7 @@
 				BB0908FA17DAD07900CD92DD /* Frameworks */,
 				BB0908FB17DAD07900CD92DD /* Resources */,
 				BBE228C317DFFD1400E58A2D /* CopyFiles */,
+				BB00B6E6187FB87F0080042A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -404,6 +409,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB00B6E6187FB87F0080042A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "thirdparty/Crashlytics.framework/run 00294b074c27a6569db329a72df442fbff108a8c";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BB0908DF17D99C7200CD92DD /* Sources */ = {
@@ -510,6 +531,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/thirdparty/",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PackageUninstallerApp/PackageUninstallerApp-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -533,6 +559,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/thirdparty/",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PackageUninstallerApp/PackageUninstallerApp-Prefix.pch";
 				INFOPLIST_FILE = "PackageUninstallerApp/PackageUninstallerApp-Info.plist";

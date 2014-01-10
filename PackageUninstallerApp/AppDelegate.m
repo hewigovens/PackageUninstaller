@@ -10,6 +10,8 @@
 #import <ServiceManagement/ServiceManagement.h>
 #import <SecurityInterface/SFAuthorizationView.h>
 
+#import <Crashlytics/Crashlytics.h>
+
 @implementation AppDelegate
 
 - (void)awakeFromNib{
@@ -25,7 +27,7 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
-
+    [Crashlytics startWithAPIKey:@"00294b074c27a6569db329a72df442fbff108a8c"];
 }
 
 
