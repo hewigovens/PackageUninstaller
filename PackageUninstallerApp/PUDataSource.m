@@ -10,7 +10,7 @@
 
 @interface PUDataSource() <NSOutlineViewDelegate, NSOutlineViewDataSource>
 
-@property (nonatomic, strong, readwrite) NSArray* packageList;
+@property (nonatomic, strong, readwrite) NSMutableArray* packageList;
 @property (nonatomic, strong, readwrite) NSMutableDictionary* prefixMap;
 @property (nonatomic, strong) NSDateFormatter* dateFormatter;
 
@@ -22,6 +22,7 @@
 {
     self = [super init];
     if (self) {
+        _packageList = [NSMutableArray new];
         _dateFormatter = [NSDateFormatter new];
         _dateFormatter.locale = [NSLocale currentLocale];
         _dateFormatter.timeStyle = NSDateFormatterNoStyle;
@@ -35,11 +36,22 @@
 {
     NSFileManager* fileMgr = [NSFileManager defaultManager];
     
-    if(self.packageList)
-    {
-        self.packageList = nil;
+    [self.packageList removeAllObjects];
+    NSArray* histories = [NSArray arrayWithContentsOfFile:@"/Library/Receipts/InstallHistory.plist"];
+    
+    for (NSDictionary* dict in histories){
+        NSUInteger existedCount = [dict[@"packageIdentifiers"] count];
+        for (NSString* packageId in dict[@"packageIdentifiers"]){
+            NSString* path = [NSString stringWithFormat:@"/var/db/receipts/%@.plist", packageId];
+            if (![fileMgr fileExistsAtPath:path]) {
+                existedCount = existedCount - 1;
+            }
+        }
+        if (existedCount > 0) {
+            [self.packageList addObject:dict];
+        }
     }
-    self.packageList = [NSArray arrayWithContentsOfFile:@"/Library/Receipts/InstallHistory.plist"];
+    
     if (self.prefixMap) {
         self.prefixMap = nil;
     }
@@ -97,6 +109,10 @@
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
+    if (item == nil) {
+        return  nil;
+    }
+    
     if ([tableColumn.identifier isEqualToString:@"name"]) {
         if ([item isKindOfClass:[NSDictionary class]]) {
             return item[@"displayName"];

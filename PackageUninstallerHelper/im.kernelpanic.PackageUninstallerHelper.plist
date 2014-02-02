@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<false/>
+	<string>im.kernelpanic.PackageUninstallerHelper</string>
 	<key>KeepAlive</key>
 	<dict>
 		<key>SuccessfulExit</key>

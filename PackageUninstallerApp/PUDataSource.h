@@ -9,7 +9,7 @@
 
 @interface PUDataSource: NSObject
 
-@property (nonatomic, strong, readonly) NSArray* packageList;
+@property (nonatomic, strong, readonly) NSMutableArray* packageList;
 @property (nonatomic, strong, readonly) NSMutableDictionary* prefixMap;
 
 -(void)load;

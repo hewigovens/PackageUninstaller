@@ -53,7 +53,6 @@
 }
 
 - (void)awakeFromNib{
-    [self initXPConnection];
     [self configDatasource];
     [self.authorizationView setString:PACKAGE_UNINSTALLER_AUTH];
     [self.authorizationView setDelegate:self];
@@ -101,7 +100,7 @@
 }
 
 -(IBAction)refreshClicked:(id)sender{
-    [self.datasource load];
+    [self.packagesListView reloadData];
 }
 
 -(void)configDatasource
