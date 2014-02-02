@@ -38,15 +38,17 @@
 		BB38601917D090D3003C482F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB38601817D090D3003C482F /* main.m */; };
 		BB770BEA17E1880200C30386 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB770BE917E1880200C30386 /* Security.framework */; };
 		BB81E0C817E193D9003C3AE1 /* AuthStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = BB81E0C717E193D9003C3AE1 /* AuthStatus.m */; };
-		BBAA237217E19A6C00D66AFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBAA237117E19A6C00D66AFB /* Images.xcassets */; };
 		BBAAB8301872F3A1000597B9 /* PUCmdDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BBAAB82F1872F3A1000597B9 /* PUCmdDispatcher.m */; };
 		BBC665BA189DE85900928F24 /* PUDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC665B9189DE85900928F24 /* PUDataSource.m */; };
+		BBC665D6189E5CBF00928F24 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC665C6189E5B7E00928F24 /* Sparkle.framework */; };
+		BBC665D8189E5D2100928F24 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBC665C6189E5B7E00928F24 /* Sparkle.framework */; };
+		BBC665E0189E61AA00928F24 /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = BBC665DF189E61AA00928F24 /* appicon.icns */; };
 		BBD1213C186DCE3C004679B3 /* NSXPCMachService.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD1213B186DCE3C004679B3 /* NSXPCMachService.m */; };
 		BBD2E5EE17E18B700042A1C7 /* PackagesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E5EA17E18B700042A1C7 /* PackagesListViewController.m */; };
 		BBD2E5EF17E18B700042A1C7 /* PackagesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD2E5EB17E18B700042A1C7 /* PackagesListViewController.xib */; };
 		BBD2E5F017E18B700042A1C7 /* PackageUninstallerUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E5ED17E18B700042A1C7 /* PackageUninstallerUtility.m */; };
 		BBD2E5FB17E18B840042A1C7 /* launchctl_lite.c in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E5F617E18B840042A1C7 /* launchctl_lite.c */; };
-		BBE228C417DFFD2700E58A2D /* im.kernelpanic.PackageUninstallerHelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB38601517D090D3003C482F /* im.kernelpanic.PackageUninstallerHelper */; };
+		BBE228C417DFFD2700E58A2D /* im.kernelpanic.PackageUninstallerHelper in Copy Helper */ = {isa = PBXBuildFile; fileRef = BB38601517D090D3003C482F /* im.kernelpanic.PackageUninstallerHelper */; };
 		CEF0057C17E7ECDC00443220 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF0057B17E7ECDC00443220 /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,48 @@
 			remoteGlobalIDString = BB0908E217D99C7200CD92DD;
 			remoteInfo = launchctl_lite_test;
 		};
+		BBC665C5189E5B7E00928F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBC665BD189E5B7D00928F24 /* Sparkle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = Sparkle;
+		};
+		BBC665C7189E5B7E00928F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBC665BD189E5B7D00928F24 /* Sparkle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 61B5F90209C4CEE200B25A18;
+			remoteInfo = "Sparkle Test App";
+		};
+		BBC665C9189E5B7E00928F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBC665BD189E5B7D00928F24 /* Sparkle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 612279D90DB5470200AB99EA;
+			remoteInfo = "Sparkle Unit Tests";
+		};
+		BBC665CB189E5B7E00928F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBC665BD189E5B7D00928F24 /* Sparkle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D06E8D00FD68C7C005AE3F6;
+			remoteInfo = BinaryDelta;
+		};
+		BBC665CD189E5B7E00928F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBC665BD189E5B7D00928F24 /* Sparkle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55C14BB7136EEF1500649790;
+			remoteInfo = finish_installation;
+		};
+		BBC665CF189E5BB600928F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBC665BD189E5B7D00928F24 /* Sparkle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Sparkle;
+		};
 		BBE228C117DFFCFF00E58A2D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BBAD879717D0224E001A05EB /* Project object */;
@@ -91,14 +135,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		BBE228C317DFFD1400E58A2D /* CopyFiles */ = {
+		BBC665D7189E5D1400928F24 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BBC665D8189E5D2100928F24 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBE228C317DFFD1400E58A2D /* Copy Helper */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = Contents/Library/LaunchServices;
 			dstSubfolderSpec = 1;
 			files = (
-				BBE228C417DFFD2700E58A2D /* im.kernelpanic.PackageUninstallerHelper in CopyFiles */,
+				BBE228C417DFFD2700E58A2D /* im.kernelpanic.PackageUninstallerHelper in Copy Helper */,
 			);
+			name = "Copy Helper";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -132,7 +187,6 @@
 		BB81E0C417E1909A003C3AE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BB81E0C617E193D9003C3AE1 /* AuthStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthStatus.h; sourceTree = "<group>"; };
 		BB81E0C717E193D9003C3AE1 /* AuthStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthStatus.m; sourceTree = "<group>"; };
-		BBAA237117E19A6C00D66AFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BBAAB82E1872F3A1000597B9 /* PUCmdDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUCmdDispatcher.h; sourceTree = "<group>"; };
 		BBAAB82F1872F3A1000597B9 /* PUCmdDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUCmdDispatcher.m; sourceTree = "<group>"; };
 		BBAD87A417D0224E001A05EB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -140,6 +194,8 @@
 		BBAD87A917D0224E001A05EB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		BBC665B8189DE85900928F24 /* PUDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDataSource.h; sourceTree = "<group>"; };
 		BBC665B9189DE85900928F24 /* PUDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDataSource.m; sourceTree = "<group>"; };
+		BBC665BD189E5B7D00928F24 /* Sparkle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sparkle.xcodeproj; path = thirdparty/Sparkle/Sparkle.xcodeproj; sourceTree = "<group>"; };
+		BBC665DF189E61AA00928F24 /* appicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = appicon.icns; path = ../appicon.icns; sourceTree = "<group>"; };
 		BBD1213A186DCE3C004679B3 /* NSXPCMachService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCMachService.h; sourceTree = "<group>"; };
 		BBD1213B186DCE3C004679B3 /* NSXPCMachService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXPCMachService.m; sourceTree = "<group>"; };
 		BBD2E5E817E18B5B0042A1C7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = PackageUninstallerApp/Constants.h; sourceTree = SOURCE_ROOT; };
@@ -172,6 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC665D6189E5CBF00928F24 /* Sparkle.framework in Frameworks */,
 				CEF0057C17E7ECDC00443220 /* ServiceManagement.framework in Frameworks */,
 				BB00B6E8187FB8E20080042A /* Crashlytics.framework in Frameworks */,
 				BB770BEA17E1880200C30386 /* Security.framework in Frameworks */,
@@ -219,8 +276,8 @@
 		BB09090017DAD07900CD92DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BBAA237117E19A6C00D66AFB /* Images.xcassets */,
 				BB09090117DAD07900CD92DD /* PackageUninstallerApp-Info.plist */,
+				BBC665DF189E61AA00928F24 /* appicon.icns */,
 				BB09090217DAD07900CD92DD /* InfoPlist.strings */,
 				BB09090517DAD07900CD92DD /* main.m */,
 				BB09090717DAD07900CD92DD /* PackageUninstallerApp-Prefix.pch */,
@@ -254,6 +311,7 @@
 		BBAD879617D0224E001A05EB = {
 			isa = PBXGroup;
 			children = (
+				BBC665BD189E5B7D00928F24 /* Sparkle.xcodeproj */,
 				BB0908E417D99C7200CD92DD /* launchctl_lite_test */,
 				BB38601717D090D3003C482F /* PackageUninstallerHelper */,
 				BB0908FF17DAD07900CD92DD /* PackageUninstallerApp */,
@@ -310,6 +368,18 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		BBC665BE189E5B7D00928F24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBC665C6189E5B7E00928F24 /* Sparkle.framework */,
+				BBC665C8189E5B7E00928F24 /* Sparkle Test App.app */,
+				BBC665CA189E5B7E00928F24 /* Sparkle Unit Tests.octest */,
+				BBC665CC189E5B7E00928F24 /* BinaryDelta */,
+				BBC665CE189E5B7E00928F24 /* finish_installation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BBD2E5F117E18B840042A1C7 /* launchctl */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,12 +427,14 @@
 				BB0908F917DAD07900CD92DD /* Sources */,
 				BB0908FA17DAD07900CD92DD /* Frameworks */,
 				BB0908FB17DAD07900CD92DD /* Resources */,
-				BBE228C317DFFD1400E58A2D /* CopyFiles */,
-				BB00B6E6187FB87F0080042A /* ShellScript */,
+				BBE228C317DFFD1400E58A2D /* Copy Helper */,
+				BBC665D7189E5D1400928F24 /* CopyFiles */,
+				BB00B6E6187FB87F0080042A /* Run Crashlytics script */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BBC665D0189E5BB600928F24 /* PBXTargetDependency */,
 				BBE228C217DFFCFF00E58A2D /* PBXTargetDependency */,
 			);
 			name = PackageUninstallerApp;
@@ -406,6 +478,12 @@
 			mainGroup = BBAD879617D0224E001A05EB;
 			productRefGroup = BBAD87A217D0224E001A05EB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BBC665BE189E5B7D00928F24 /* Products */;
+					ProjectRef = BBC665BD189E5B7D00928F24 /* Sparkle.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BB09092B17DAD1B000CD92DD /* All */,
@@ -416,15 +494,53 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		BBC665C6189E5B7E00928F24 /* Sparkle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Sparkle.framework;
+			remoteRef = BBC665C5189E5B7E00928F24 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BBC665C8189E5B7E00928F24 /* Sparkle Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Sparkle Test App.app";
+			remoteRef = BBC665C7189E5B7E00928F24 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BBC665CA189E5B7E00928F24 /* Sparkle Unit Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Sparkle Unit Tests.octest";
+			remoteRef = BBC665C9189E5B7E00928F24 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BBC665CC189E5B7E00928F24 /* BinaryDelta */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = BinaryDelta;
+			remoteRef = BBC665CB189E5B7E00928F24 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BBC665CE189E5B7E00928F24 /* finish_installation.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = finish_installation.app;
+			remoteRef = BBC665CD189E5B7E00928F24 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		BB0908FB17DAD07900CD92DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BBD2E5EF17E18B700042A1C7 /* PackagesListViewController.xib in Resources */,
-				BBAA237217E19A6C00D66AFB /* Images.xcassets in Resources */,
 				BB09090417DAD07900CD92DD /* InfoPlist.strings in Resources */,
 				BB0909C017DF454900CD92DD /* SystemFolders.plist in Resources */,
+				BBC665E0189E61AA00928F24 /* appicon.icns in Resources */,
 				BB09091017DAD07900CD92DD /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,13 +548,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BB00B6E6187FB87F0080042A /* ShellScript */ = {
+		BB00B6E6187FB87F0080042A /* Run Crashlytics script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Crashlytics script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +617,11 @@
 			target = BB0908E217D99C7200CD92DD /* launchctl_lite_test */;
 			targetProxy = BB09093517DAD1C600CD92DD /* PBXContainerItemProxy */;
 		};
+		BBC665D0189E5BB600928F24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Sparkle;
+			targetProxy = BBC665CF189E5BB600928F24 /* PBXContainerItemProxy */;
+		};
 		BBE228C217DFFCFF00E58A2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BB38601417D090D3003C482F /* im.kernelpanic.PackageUninstallerHelper */;
@@ -550,7 +672,6 @@
 		BB09092517DAD07A00CD92DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -570,6 +691,7 @@
 					"$(SDKROOT)/usr/lib/system",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -578,7 +700,6 @@
 		BB09092617DAD07A00CD92DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -594,6 +715,7 @@
 					"$(SDKROOT)/usr/lib/system",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
