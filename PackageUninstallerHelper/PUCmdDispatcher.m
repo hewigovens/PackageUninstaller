@@ -38,11 +38,21 @@
     switch (cmd) {
         case PU_CMD_ACK:
         case PU_CMD_SYN:
+        {
             [self handleCommandSYN:event withReply:&reply];
+            break;
+        }
         case PU_CMD_REMOVE_BOM:
+        {
             [self handleCommandRemove:event withReply:&reply];
+            break;
+        }
         case PU_CMD_EXIT:
+        {
             [self handleCommandExit:event withReply:&reply];
+            break;
+        }
+        default:
             break;
     }
     xpc_dictionary_set_int64(reply, PU_VERSION_KEY, PU_COMMAND_VERSION);

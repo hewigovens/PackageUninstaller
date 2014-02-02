@@ -55,7 +55,6 @@
 - (void)awakeFromNib{
     [self initXPConnection];
     [self configDatasource];
-    [self listAllPackages];
     [self.authorizationView setString:PACKAGE_UNINSTALLER_AUTH];
     [self.authorizationView setDelegate:self];
     [self.authorizationView setAutoupdate:YES];
@@ -65,37 +64,50 @@
 
 - (IBAction)uninstallClicked:(id)sender{
     
-    if(-1 == [self.packagesListView selectedRow]){
+    NSUInteger selectedRow = [self.packagesListView selectedRow];
+    if(selectedRow == -1){
         NSLog(@"no row selected");
         return;
     }
+
+    id selectedItem = [self.packagesListView itemAtRow:selectedRow];
     
-    NSDictionary* dict = [self.datasource.packageList objectAtIndex:[self.packagesListView selectedRow]];
+    NSMutableArray* cmds = [NSMutableArray new];
     
-    NSDictionary* data = @{
-                            @PU_PACKAGE_ID_KEY: dict[@"package_id"],
-                            @PU_INSTALL_PREFIX_KEY:dict[@"install_prefix"]};
+    if ([selectedItem isKindOfClass:[NSString class]]) {
+        NSDictionary* data = @{@PU_PACKAGE_ID_KEY: selectedItem,
+                               @PU_INSTALL_PREFIX_KEY:self.datasource.prefixMap[selectedItem]
+                              };
+        [cmds addObject:data];
+    } else if ([selectedItem isKindOfClass:[NSDictionary class]]){
+        NSArray* packageIds = [selectedItem valueForKey:@"packageIdentifiers"];
+        for (NSString* packageId in packageIds){
+            NSDictionary* data = @{
+                                    @PU_PACKAGE_ID_KEY: packageId,
+                                    @PU_INSTALL_PREFIX_KEY:self.datasource.prefixMap[packageId]
+                                 };
+            [cmds addObject:data];
+        }
+    }
     
-    [self sendXPCCommandAsync:PU_CMD_REMOVE_BOM withData:data Handler:^(xpc_object_t event){
-    
-        int ret = (int)xpc_dictionary_get_int64(event,PU_RET_KEY);
-        NSLog(@"command PU_CMD_REMOVE_BOM returns:%d", ret);
-        [self performSelectorOnMainThread:@selector(refreshClicked:) withObject:nil waitUntilDone:NO];
-    }];
+    for (NSDictionary* data in cmds){
+        [self sendXPCCommandAsync:PU_CMD_REMOVE_BOM withData:data Handler:^(xpc_object_t event){
+            
+            int ret = (int)xpc_dictionary_get_int64(event,PU_RET_KEY);
+            NSLog(@"command PU_CMD_REMOVE_BOM returns:%d", ret);
+            [self performSelectorOnMainThread:@selector(refreshClicked:) withObject:nil waitUntilDone:NO];
+        }];
+    }
 }
 
 -(IBAction)refreshClicked:(id)sender{
-    [self listAllPackages];
+    [self.datasource load];
 }
 
 -(void)configDatasource
 {
     [self.packagesListView setDataSource:(id<NSOutlineViewDataSource>)self.datasource];
     [self.packagesListView setDelegate:(id<NSOutlineViewDelegate>)self.datasource];
-}
-
-- (void)listAllPackages{
-    [self.datasource load];
 }
 
 #pragma mark XPC

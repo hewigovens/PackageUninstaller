@@ -3,7 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>im.kernelpanic.PackageUninstallerHelper</string>
+	<false/>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
 	<key>StandardOutPath</key>
 	<string>/var/log/PUHelper.log</string>
 	<key>StandardErrorPath</key>
