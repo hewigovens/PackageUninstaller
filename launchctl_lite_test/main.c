@@ -35,12 +35,18 @@ void test_remove_cmd()
     launchctl_remove_cmd("im.kernelpanic.PackageUninstallerHelper");
 }
 
+void test_load_job()
+{
+    launchctl_submit_job("org.goagent.macos");
+}
+
 int main(int argc, const char * argv[])
 {
     if (getuid() == 0) {
         launchctl_setup_system_context();
     }
     test_list_cmd();
+    test_load_job();
     return 0;
 }
 

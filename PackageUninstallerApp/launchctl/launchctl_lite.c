@@ -8,6 +8,12 @@
 
 #include "launchctl_lite.h"
 
+struct load_unload_state {
+	launch_data_t pass1;
+	char *session_type;
+	bool editondisk:1, load:1, forceload:1;
+};
+
 static void _launch_data_iterate(launch_data_t obj, const char *key, CFMutableDictionaryRef dict);
 static mach_port_t str2bsport(const char *s);
 static CFDictionaryRef CFDictionaryCreateFromLaunchDictionary(launch_data_t dict);
@@ -218,6 +224,11 @@ launch_data_array_append(launch_data_t a, launch_data_t o)
 	size_t offt = launch_data_array_get_count(a);
     
 	return launch_data_array_set_index(a, o, offt);
+}
+
+int launchctl_submit_job(const char* label)
+{
+    return 0;
 }
 
 bool launchctl_is_job_alive(const char* label)

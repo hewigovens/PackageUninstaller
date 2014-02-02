@@ -23,4 +23,5 @@ int launchctl_remove_cmd(const char* label);
 bool launchctl_is_job_alive(const char* label);
 void launchctl_setup_system_context(void);
 
+int launchctl_submit_job(const char* label);
 #endif
