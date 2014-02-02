@@ -12,6 +12,7 @@
 @property (nonatomic, strong, readonly) NSMutableArray* packageList;
 @property (nonatomic, strong, readonly) NSMutableDictionary* prefixMap;
 
+-(void)remove:(id)obj;
 -(void)load;
 
 @end

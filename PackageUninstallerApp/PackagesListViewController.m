@@ -94,6 +94,7 @@
             
             int ret = (int)xpc_dictionary_get_int64(event,PU_RET_KEY);
             NSLog(@"command PU_CMD_REMOVE_BOM returns:%d", ret);
+            [self.datasource remove:selectedItem];
             [self performSelectorOnMainThread:@selector(refreshClicked:) withObject:nil waitUntilDone:NO];
         }];
     }

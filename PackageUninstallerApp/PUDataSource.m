@@ -32,6 +32,11 @@
     return self;
 }
 
+-(void)remove:(id)obj
+{
+    [self.packageList removeObject:obj];
+}
+
 -(void)load
 {
     NSFileManager* fileMgr = [NSFileManager defaultManager];

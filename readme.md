@@ -23,7 +23,6 @@ It's really annoying that Apps installed by pkg files don't provide a way to uni
 
 ###TODO
 
-* setup a DB to make App names more readable.
 * hook Apple Installer to support uninstall apps like MS Office.
 * * pkg files are abused in MS Office.
 * * Please go [How to completely remove Office for Mac 2011](http://support.microsoft.com/kb/2398768) for help, :)
