@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class SFAuthorization;
-@interface PackagesListViewController : NSViewController<NSTableViewDelegate, NSTableViewDataSource>
+@interface PackagesListViewController : NSViewController
 
 @end

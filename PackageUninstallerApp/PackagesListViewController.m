@@ -6,50 +6,55 @@
 //  Copyright (c) 2013 hewig. All rights reserved.
 //
 
+#import <Security/Security.h>
+#import <SecurityInterface/SFAuthorizationView.h>
+
 #import "PackagesListViewController.h"
 #import "AuthStatus.h"
 #import "Constants.h"
+#import "PUDataSource.h"
+
 #import "PackageUninstallerUtility.h"
-#import <Security/Security.h>
-#import <SecurityInterface/SFAuthorizationView.h>
 
 
 @interface PackagesListViewController ()
 {
     xpc_connection_t connection_;
 }
-@property (nonatomic, strong) NSMutableArray* packagesList;
-@property (nonatomic, weak) IBOutlet NSArrayController* packagesListArrayController;
-@property (nonatomic, weak) IBOutlet NSTableView* packagesListView;
+
+@property (nonatomic, weak) IBOutlet NSOutlineView* packagesListView;
 @property (nonatomic, weak) IBOutlet NSButton* uninstallButton;
 @property (nonatomic, weak) IBOutlet NSButton* refreshButton;
 @property (nonatomic, weak) IBOutlet SFAuthorizationView* authorizationView;
 @property (nonatomic, weak) IBOutlet AuthStatus* authStatus;
 @property (nonatomic, strong) SFAuthorization* authorization;
+@property (nonatomic, strong) PUDataSource* datasource;
 @property (nonatomic, assign) BOOL helperAvailable;
 
 @end
 
 @implementation PackagesListViewController
 
-@synthesize authStatus;
-@synthesize packagesList;
-@synthesize packagesListArrayController;
-@synthesize packagesListView;
-@synthesize uninstallButton;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.packagesList = [[NSMutableArray alloc] init];
-        self.helperAvailable = NO;
+        _datasource = [[PUDataSource alloc] init];
+        _helperAvailable = NO;
     }
     return self;
 }
 
+-(void)dealloc
+{
+    if (connection_) {
+        xpc_release(connection_);
+    }
+}
+
 - (void)awakeFromNib{
     [self initXPConnection];
+    [self configDatasource];
     [self listAllPackages];
     [self.authorizationView setString:PACKAGE_UNINSTALLER_AUTH];
     [self.authorizationView setDelegate:self];
@@ -64,7 +69,9 @@
         NSLog(@"no row selected");
         return;
     }
-    NSDictionary* dict = self.packagesList[[self.packagesListView selectedRow]];
+    
+    NSDictionary* dict = [self.datasource.packageList objectAtIndex:[self.packagesListView selectedRow]];
+    
     NSDictionary* data = @{
                             @PU_PACKAGE_ID_KEY: dict[@"package_id"],
                             @PU_INSTALL_PREFIX_KEY:dict[@"install_prefix"]};
@@ -78,11 +85,20 @@
 }
 
 -(IBAction)refreshClicked:(id)sender{
-    NSRange range = NSMakeRange(0, [[self.packagesListArrayController arrangedObjects] count]);
-    
-    [self.packagesListArrayController removeObjectsAtArrangedObjectIndexes:[NSIndexSet indexSetWithIndexesInRange:range]];
     [self listAllPackages];
 }
+
+-(void)configDatasource
+{
+    [self.packagesListView setDataSource:(id<NSOutlineViewDataSource>)self.datasource];
+    [self.packagesListView setDelegate:(id<NSOutlineViewDelegate>)self.datasource];
+}
+
+- (void)listAllPackages{
+    [self.datasource load];
+}
+
+#pragma mark XPC
 
 - (void)sendXPCCommandAsync:(PUCommand)command withData:(NSDictionary*)data Handler:(xpc_handler_t) handler{
     xpc_object_t message =xpc_dictionary_create(NULL, NULL, 0);
@@ -96,38 +112,6 @@
     }
     xpc_connection_send_message_with_reply(connection_, message, dispatch_get_main_queue(), handler);
     xpc_release(message);
-}
-
-- (void)listAllPackages{
-    NSFileManager* fileMgr = [NSFileManager defaultManager];
-    NSDirectoryEnumerator* fileEnumerator = [fileMgr enumeratorAtPath:@"/var/db/receipts"];
-
-    NSString* file;
-    while (file = [fileEnumerator nextObject]) {
-        NSString* bundleId = [file stringByDeletingPathExtension];
-        NSString* fileExt = [file pathExtension];
-        if ([fileExt isEqualToString:@"bom"]) {
-            continue;
-        }
-        if ([bundleId hasPrefix:@"com.apple"] || [bundleId hasPrefix:@"com.microsoft"]) {
-            continue;
-        }
-        
-        NSDictionary* infoPlist = [[NSDictionary alloc]initWithContentsOfFile:[NSString stringWithFormat:@"/var/db/receipts/%@", file]];
-        
-        NSString* install_prefix;
-        NSString* temp_prefix = infoPlist[@"InstallPrefixPath"];
-        if ([temp_prefix isEqualToString:@""] || [temp_prefix isEqualToString:@"/"]){
-            install_prefix = @"/";
-        } else{
-            install_prefix = [NSString stringWithFormat:@"/%@", temp_prefix];
-        }
-    
-        [self.packagesListArrayController addObject:@{
-                                                      @"name": [infoPlist[@"PackageFileName"] stringByDeletingPathExtension],
-                                                      @"package_id":bundleId,
-                                                      @"install_prefix":install_prefix}];
-    }
 }
 
 -(void)initXPConnection{

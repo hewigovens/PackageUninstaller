@@ -40,6 +40,7 @@
 		BB81E0C817E193D9003C3AE1 /* AuthStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = BB81E0C717E193D9003C3AE1 /* AuthStatus.m */; };
 		BBAA237217E19A6C00D66AFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBAA237117E19A6C00D66AFB /* Images.xcassets */; };
 		BBAAB8301872F3A1000597B9 /* PUCmdDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BBAAB82F1872F3A1000597B9 /* PUCmdDispatcher.m */; };
+		BBC665BA189DE85900928F24 /* PUDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC665B9189DE85900928F24 /* PUDataSource.m */; };
 		BBD1213C186DCE3C004679B3 /* NSXPCMachService.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD1213B186DCE3C004679B3 /* NSXPCMachService.m */; };
 		BBD2E5EE17E18B700042A1C7 /* PackagesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E5EA17E18B700042A1C7 /* PackagesListViewController.m */; };
 		BBD2E5EF17E18B700042A1C7 /* PackagesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD2E5EB17E18B700042A1C7 /* PackagesListViewController.xib */; };
@@ -137,6 +138,8 @@
 		BBAD87A417D0224E001A05EB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BBAD87A617D0224E001A05EB /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
 		BBAD87A917D0224E001A05EB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BBC665B8189DE85900928F24 /* PUDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUDataSource.h; sourceTree = "<group>"; };
+		BBC665B9189DE85900928F24 /* PUDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUDataSource.m; sourceTree = "<group>"; };
 		BBD1213A186DCE3C004679B3 /* NSXPCMachService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCMachService.h; sourceTree = "<group>"; };
 		BBD1213B186DCE3C004679B3 /* NSXPCMachService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXPCMachService.m; sourceTree = "<group>"; };
 		BBD2E5E817E18B5B0042A1C7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = PackageUninstallerApp/Constants.h; sourceTree = SOURCE_ROOT; };
@@ -198,19 +201,15 @@
 		BB0908FF17DAD07900CD92DD /* PackageUninstallerApp */ = {
 			isa = PBXGroup;
 			children = (
-				BBAA237117E19A6C00D66AFB /* Images.xcassets */,
 				BBD2E5F117E18B840042A1C7 /* launchctl */,
-				BB81E0C617E193D9003C3AE1 /* AuthStatus.h */,
-				BB81E0C717E193D9003C3AE1 /* AuthStatus.m */,
+				BBC665BC189DF03D00928F24 /* Common */,
+				BBC665BB189DF01100928F24 /* Binding */,
 				BBD2E5E917E18B5B0042A1C7 /* PackagesListViewController.h */,
 				BBD2E5EA17E18B700042A1C7 /* PackagesListViewController.m */,
-				BBD2E5EB17E18B700042A1C7 /* PackagesListViewController.xib */,
-				BBD2E5EC17E18B700042A1C7 /* PackageUninstallerUtility.h */,
-				BBD2E5ED17E18B700042A1C7 /* PackageUninstallerUtility.m */,
-				BBD2E5E817E18B5B0042A1C7 /* Constants.h */,
 				BB09090B17DAD07900CD92DD /* AppDelegate.h */,
 				BB09090C17DAD07900CD92DD /* AppDelegate.m */,
 				BB09090E17DAD07900CD92DD /* MainMenu.xib */,
+				BBD2E5EB17E18B700042A1C7 /* PackagesListViewController.xib */,
 				BB0909BF17DF454900CD92DD /* SystemFolders.plist */,
 				BB09090017DAD07900CD92DD /* Supporting Files */,
 			);
@@ -220,6 +219,7 @@
 		BB09090017DAD07900CD92DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BBAA237117E19A6C00D66AFB /* Images.xcassets */,
 				BB09090117DAD07900CD92DD /* PackageUninstallerApp-Info.plist */,
 				BB09090217DAD07900CD92DD /* InfoPlist.strings */,
 				BB09090517DAD07900CD92DD /* main.m */,
@@ -287,6 +287,27 @@
 				BB385FEE17D07E3F003C482F /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBC665BB189DF01100928F24 /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				BBC665B8189DE85900928F24 /* PUDataSource.h */,
+				BBC665B9189DE85900928F24 /* PUDataSource.m */,
+				BB81E0C617E193D9003C3AE1 /* AuthStatus.h */,
+				BB81E0C717E193D9003C3AE1 /* AuthStatus.m */,
+			);
+			name = Binding;
+			sourceTree = "<group>";
+		};
+		BBC665BC189DF03D00928F24 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BBD2E5EC17E18B700042A1C7 /* PackageUninstallerUtility.h */,
+				BBD2E5ED17E18B700042A1C7 /* PackageUninstallerUtility.m */,
+				BBD2E5E817E18B5B0042A1C7 /* Constants.h */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		BBD2E5F117E18B840042A1C7 /* launchctl */ = {
@@ -440,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC665BA189DE85900928F24 /* PUDataSource.m in Sources */,
 				BBD2E5EE17E18B700042A1C7 /* PackagesListViewController.m in Sources */,
 				BB09090D17DAD07900CD92DD /* AppDelegate.m in Sources */,
 				BBD2E5FB17E18B840042A1C7 /* launchctl_lite.c in Sources */,
