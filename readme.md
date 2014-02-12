@@ -15,11 +15,16 @@ It's really annoying that Apps installed by pkg files don't provide a way to uni
 
 ###Build
 
+* `git submodule update --init`
 * Create a Self Signed Root/Code Signing named "Developer ID Application: In House Only" from KeyChain Acess.app
 * Update your codesign certificate if you have enrolled Mac Developer Program:
 * * key `SMPrivilegedExecutables` in `PackageUninstallerApp-Info.plist`
 * * key `SMAuthorizedClients` in `PackageUninstallerHelper-Info.plist`
+* Open `PackageUninstaller.xcodeproj`, Click Product -> Archive
 
+###Downloads
+
+Download from [sourceforge](http://sourceforge.net/projects/packageuninstaller/files/latest/download)
 
 ###TODO
 

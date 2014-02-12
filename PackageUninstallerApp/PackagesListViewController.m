@@ -70,6 +70,7 @@
     }
 
     id selectedItem = [self.packagesListView itemAtRow:selectedRow];
+    id selectedParentItem = selectedItem;
     
     NSMutableArray* cmds = [NSMutableArray new];
     
@@ -78,6 +79,7 @@
                                @PU_INSTALL_PREFIX_KEY:self.datasource.prefixMap[selectedItem]
                               };
         [cmds addObject:data];
+        selectedParentItem = [self.packagesListView parentForItem:selectedItem];
     } else if ([selectedItem isKindOfClass:[NSDictionary class]]){
         NSArray* packageIds = [selectedItem valueForKey:@"packageIdentifiers"];
         for (NSString* packageId in packageIds){
@@ -94,13 +96,17 @@
             
             int ret = (int)xpc_dictionary_get_int64(event,PU_RET_KEY);
             NSLog(@"command PU_CMD_REMOVE_BOM returns:%d", ret);
-            [self.datasource remove:selectedItem];
+            [self.datasource remove:selectedParentItem];
             [self performSelectorOnMainThread:@selector(refreshClicked:) withObject:nil waitUntilDone:NO];
         }];
     }
 }
 
 -(IBAction)refreshClicked:(id)sender{
+    if (sender) {
+        //User clicked
+        [self.datasource load];
+    }
     [self.packagesListView reloadData];
 }
 
