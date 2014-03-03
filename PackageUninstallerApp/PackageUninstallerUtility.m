@@ -35,8 +35,8 @@
         
         if (status != errAuthorizationSuccess) {
             NSLog(@"%@",[NSString stringWithFormat:@"Failed to create AuthorizationRef. Error code: %d", (int)status]);
+            return result;
         }
-        return result;
     }
     
     CFErrorRef cfError;
