@@ -39,10 +39,12 @@
         }
     }
     
-    CFErrorRef cfError;
-    result = SMJobBless(kSMDomainSystemLaunchd, (__bridge CFStringRef)label, authRef,&cfError);
+    CFErrorRef cfError = NULL;
+    result = SMJobBless(kSMDomainSystemLaunchd, (__bridge CFStringRef)label, authRef, &cfError);
     if (error) {
-        *error = CFBridgingRelease(cfError);
+        if (cfError) {
+            *error = (__bridge NSError *)cfError;
+        }
     }
     
     return result;
