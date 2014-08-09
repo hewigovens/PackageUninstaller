@@ -13,7 +13,7 @@
 			buildPhases = (
 			);
 			dependencies = (
-				BB09093617DAD1C600CD92DD /* PBXTargetDependency */,
+				BBD472A21995F60A001CCA9B /* PBXTargetDependency */,
 				BB09093417DAD1C300CD92DD /* PBXTargetDependency */,
 				BB09093017DAD1BF00CD92DD /* PBXTargetDependency */,
 			);
@@ -41,14 +41,14 @@
 		BBAAB8301872F3A1000597B9 /* PUCmdDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BBAAB82F1872F3A1000597B9 /* PUCmdDispatcher.m */; };
 		BBC665BA189DE85900928F24 /* PUDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC665B9189DE85900928F24 /* PUDataSource.m */; };
 		BBC665D6189E5CBF00928F24 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC665C6189E5B7E00928F24 /* Sparkle.framework */; };
-		BBC665D8189E5D2100928F24 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBC665C6189E5B7E00928F24 /* Sparkle.framework */; };
+		BBC665D8189E5D2100928F24 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBC665C6189E5B7E00928F24 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		BBC665E0189E61AA00928F24 /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = BBC665DF189E61AA00928F24 /* appicon.icns */; };
 		BBD1213C186DCE3C004679B3 /* NSXPCMachService.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD1213B186DCE3C004679B3 /* NSXPCMachService.m */; };
 		BBD2E5EE17E18B700042A1C7 /* PackagesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E5EA17E18B700042A1C7 /* PackagesListViewController.m */; };
 		BBD2E5EF17E18B700042A1C7 /* PackagesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD2E5EB17E18B700042A1C7 /* PackagesListViewController.xib */; };
 		BBD2E5F017E18B700042A1C7 /* PackageUninstallerUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E5ED17E18B700042A1C7 /* PackageUninstallerUtility.m */; };
 		BBD2E5FB17E18B840042A1C7 /* launchctl_lite.c in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E5F617E18B840042A1C7 /* launchctl_lite.c */; };
-		BBE228C417DFFD2700E58A2D /* im.kernelpanic.PackageUninstallerHelper in Copy Helper */ = {isa = PBXBuildFile; fileRef = BB38601517D090D3003C482F /* im.kernelpanic.PackageUninstallerHelper */; };
+		BBE228C417DFFD2700E58A2D /* im.kernelpanic.PackageUninstallerHelper in Copy Helper */ = {isa = PBXBuildFile; fileRef = BB38601517D090D3003C482F /* im.kernelpanic.PackageUninstallerHelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEF0057C17E7ECDC00443220 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF0057B17E7ECDC00443220 /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,13 +66,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = BB38601417D090D3003C482F;
 			remoteInfo = im.kernelpanic.PackageUninstallerHelper;
-		};
-		BB09093517DAD1C600CD92DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BBAD879717D0224E001A05EB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB0908E217D99C7200CD92DD;
-			remoteInfo = launchctl_lite_test;
 		};
 		BBC665C5189E5B7E00928F24 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -115,6 +108,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Sparkle;
+		};
+		BBD472A11995F60A001CCA9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBAD879717D0224E001A05EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB0908E217D99C7200CD92DD;
+			remoteInfo = launchctl_lite_test;
 		};
 		BBE228C117DFFCFF00E58A2D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -373,9 +373,9 @@
 			children = (
 				BBC665C6189E5B7E00928F24 /* Sparkle.framework */,
 				BBC665C8189E5B7E00928F24 /* Sparkle Test App.app */,
-				BBC665CA189E5B7E00928F24 /* Sparkle Unit Tests.octest */,
+				BBC665CA189E5B7E00928F24 /* Sparkle Unit Tests.xctest */,
 				BBC665CC189E5B7E00928F24 /* BinaryDelta */,
-				BBC665CE189E5B7E00928F24 /* finish_installation.app */,
+				BBC665CE189E5B7E00928F24 /* Autoupdate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -464,8 +464,16 @@
 		BBAD879717D0224E001A05EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = hewig;
+				TargetAttributes = {
+					BB0908FC17DAD07900CD92DD = {
+						DevelopmentTeam = FH9QG7ZJR9;
+					};
+					BB38601417D090D3003C482F = {
+						DevelopmentTeam = FH9QG7ZJR9;
+					};
+				};
 			};
 			buildConfigurationList = BBAD879A17D0224E001A05EB /* Build configuration list for PBXProject "PackageUninstaller" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -509,10 +517,10 @@
 			remoteRef = BBC665C7189E5B7E00928F24 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BBC665CA189E5B7E00928F24 /* Sparkle Unit Tests.octest */ = {
+		BBC665CA189E5B7E00928F24 /* Sparkle Unit Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "Sparkle Unit Tests.octest";
+			path = "Sparkle Unit Tests.xctest";
 			remoteRef = BBC665C9189E5B7E00928F24 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -523,10 +531,10 @@
 			remoteRef = BBC665CB189E5B7E00928F24 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BBC665CE189E5B7E00928F24 /* finish_installation.app */ = {
+		BBC665CE189E5B7E00928F24 /* Autoupdate.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = finish_installation.app;
+			path = Autoupdate.app;
 			remoteRef = BBC665CD189E5B7E00928F24 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -612,15 +620,15 @@
 			target = BB38601417D090D3003C482F /* im.kernelpanic.PackageUninstallerHelper */;
 			targetProxy = BB09093317DAD1C300CD92DD /* PBXContainerItemProxy */;
 		};
-		BB09093617DAD1C600CD92DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB0908E217D99C7200CD92DD /* launchctl_lite_test */;
-			targetProxy = BB09093517DAD1C600CD92DD /* PBXContainerItemProxy */;
-		};
 		BBC665D0189E5BB600928F24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Sparkle;
 			targetProxy = BBC665CF189E5BB600928F24 /* PBXContainerItemProxy */;
+		};
+		BBD472A21995F60A001CCA9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB0908E217D99C7200CD92DD /* launchctl_lite_test */;
+			targetProxy = BBD472A11995F60A001CCA9B /* PBXContainerItemProxy */;
 		};
 		BBE228C217DFFCFF00E58A2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -673,6 +681,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -693,6 +703,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -701,6 +712,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -717,6 +730,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -739,6 +753,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PackageUninstallerHelper/PackageUninstallerHelper-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -762,6 +778,8 @@
 					PackageUninstallerHelper/im.kernelpanic.PackageUninstallerHelper.plist,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -769,6 +787,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PackageUninstallerHelper/PackageUninstallerHelper-Prefix.pch";
 				INFOPLIST_FILE = "$(TARGET_NAME)-Info.plist";
@@ -788,6 +808,8 @@
 					PackageUninstallerHelper/im.kernelpanic.PackageUninstallerHelper.plist,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};

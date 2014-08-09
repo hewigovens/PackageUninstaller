@@ -9,7 +9,7 @@
 #ifndef Package_Uninstaller_launchctl_lite_h
 #define Package_Uninstaller_launchctl_lite_h
 
-#include "launch.h"
+#include <launch.h>
 #include "launch_priv.h"
 #include "vproc_priv.h"
 #include "launch_internal.h"
