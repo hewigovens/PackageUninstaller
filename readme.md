@@ -1,6 +1,6 @@
-### Introduction
+## This project is no longer maintained.
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/hewigovens/packageuninstaller/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+### Introduction
 
 It's really annoying that Apps installed by pkg files don't provide a way to uninstall them. Package Uninstaller is kind of Proof of Concept to solve this problem. It will list all your installer receipts and you can uninstall them with just one click.
 
